@@ -1,0 +1,14 @@
+[host_normal]
+<% if @rabbit_config['AdmHostName'] %> hostname <%= @rabbit_config['AdmHostName'] %> <% end %>
+<% if @rabbit_config['AdmPort'] %> port <%= @rabbit_config['AdmPort'] %> <% end %>
+<% if @rabbit_config['AdmUsername'] %> username <%= @rabbit_config['AdmUsername'] %> <% end %>
+<% if @rabbit_config['AdmPass'] %> password <%= @rabbit_config['AdmPass'] %> <% end %>
+
+#[host_ssl]
+#hostname = otherhost
+#port = 55672
+#username = guest
+#password = guest
+#ssl = True
+#ssl_key_file = /path/to/key.pem
+#ssl_cert_file = /path/to/cert.pem

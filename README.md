@@ -1,0 +1,3 @@
+puppet-mod-rabbit
+
+rabbitinstall

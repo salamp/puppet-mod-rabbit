@@ -1,0 +1,20 @@
+# Defaults to rabbit. This can be useful if you want to run more than one node
+# per machine - RABBITMQ_NODENAME should be unique per erlang-node-and-machine
+# combination. See the clustering on a single machine guide for details:
+# http://www.rabbitmq.com/clustering.html#single-machine
+#NODENAME=rabbit
+<% if @rabbit_config['NodeName'] %>NODENAME <%= @rabbit_config['NodeName'] %> <% end %>
+
+# By default RabbitMQ will bind to all interfaces, on IPv4 and IPv6 if
+# available. Set this if you only want to bind to one network interface or#
+# address family.
+#NODE_IP_ADDRESS=127.0.0.1
+<% if @rabbit_config['NodeIpAddress'] %>NODE_IP_ADDRESS <%= @rabbit_config['NodeIpAddress'] %> <% end %>
+
+# Defaults to 5672.
+#NODE_PORT=5672
+<% if @rabbit_config['NodePort'] %>NODE_PORT <%= @rabbit_config['NodePort'] %> <% end %>
+
+#USE_LONGNAME=true
+<% if @rabbit_config['UseLongName'] %>USE_LONGNAME <%= @rabbit_config['UseLongName'] %> <% end %>
+
